@@ -1,2 +1,2 @@
-This project is an introduction to programming in C and contains tasks completed for Holberton School Australia\n
+This project is an introduction to programming in C and contains tasks completed for Holberton School Australia
 By Maxine Janka
