@@ -26,15 +26,15 @@ void jack_bauer(void)
 
 			while (minutes < minutes_end)
 			{
-				_putchar(48 + hours_first_digit);
-				_putchar(48 + hours_second_digit);
+				_putchar('0' + hours_first_digit);
+				_putchar('0' + hours_second_digit);
 				_putchar(':');
 
 				minutes_first_digit = (minutes - minutes_second_digit) / 10;
 				minutes_second_digit = (minutes % 10);
 
-				_putchar(48 + minutes_first_digit);
-				_putchar(48 + minutes_second_digit);
+				_putchar('0' + minutes_first_digit);
+				_putchar('0' + minutes_second_digit);
 				_putchar('\n');
 
 				minutes = minutes + 1;
