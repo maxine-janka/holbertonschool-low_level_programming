@@ -16,6 +16,7 @@ void jack_bauer(void)
 	int hours_end = 24;
 	int hours_first_digit;
 	int hours_second_digit;
+	float NULL;
 
 		while (hours < hours_end)
 		{
@@ -33,6 +34,10 @@ void jack_bauer(void)
 				minutes_first_digit = (minutes - minutes_second_digit) / 10;
 				minutes_second_digit = (minutes % 10);
 
+				if (minutes_second_digit == NULL)
+				{
+				_putchar('0');
+				}
 				_putchar(48 + minutes_first_digit);
 				_putchar(48 + minutes_second_digit);
 				_putchar('\n');
