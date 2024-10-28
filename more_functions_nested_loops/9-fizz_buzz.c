@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
- * fizz_buzz - Prints numbers from 1 to 100, followed by a new line
- * print Fizz for multiples of 3 instead of the the number
- * print Buzz for multiples of 5 instead of the number
- * print FizzBuzz for multiples of 3 and 5 instead of the number
+ * main - Prints numbers from 1 to 100, followed by a new line
+ *        Print Fizz for multiples of 3 instead of the the number
+ *        Print Buzz for multiples of 5 instead of the number
+ *        Print FizzBuzz for multiples of 3 and 5 instead of the number
  *
- * Return: nothing
+ * Return: Always 0 (Success)
  */
 
-void fizz_buzz(void)
+int main(void)
 {
 	int n;
 
@@ -33,9 +33,6 @@ void fizz_buzz(void)
 		}
 	}
 	printf("\n");
-}
-int main(void)
-{
-	fizz_buzz();
+
 	return (0);
 }
