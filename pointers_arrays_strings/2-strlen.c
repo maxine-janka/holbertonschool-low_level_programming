@@ -18,6 +18,6 @@ int _strlen(char *s)
 		s = s + 1;
 		length = length + 1;
 	}
-	return length;
+	return (length);
 }
 
