@@ -50,16 +50,16 @@ void _puts(char *str)
 
 void puts_half(char *str)
 {
-	long length = _strlen(str);
+	int length = _strlen(str);
 	char *half;
 
-	if (length % 2 == 0)
+	if (length % 2 != 0)
 	{
-		half = &str[length / 2];
+		half = &str[length - 1 / 2];
 	}
 	else
 	{
-		half = &str[(length - 1 / 2)];
+		half = &str[(length / 2)];
 	}
 	_puts(half);
 }
