@@ -28,8 +28,6 @@ void puts_half(char *str)
 		half_of_string = length / 2;
 	}
 
-	index = 0;
-
 	for (index = half_of_string; index < length; index++)
 	{
 		_putchar(str[index]);
