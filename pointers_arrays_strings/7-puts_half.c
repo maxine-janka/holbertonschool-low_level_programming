@@ -5,7 +5,7 @@
  *
  * @s: Input string to determine the length
  *
- * Return: Nothing
+ * Return: length on a string
  */
 
 int  _strlen(char *s)
@@ -50,7 +50,7 @@ void _puts(char *str)
 
 void puts_half(char *str)
 {
-	int length = _strlen(str);
+	long length = _strlen(str);
 	char *half;
 
 	if (length % 2 == 0)
