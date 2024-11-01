@@ -4,7 +4,7 @@
  * _strcat: Concatenates two strings
  *
  * @src: String to appended
- * @dest: Pointer to concatonated resulting string 
+ * @dest: Pointer to concatonated resulting string
  *
  * Return: Pointer to the concatonated string
  */
