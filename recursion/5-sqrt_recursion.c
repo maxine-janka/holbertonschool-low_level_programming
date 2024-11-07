@@ -10,7 +10,7 @@
  *         Return -1 is the number does not have a natural square root.
  */
 
-int _find_sqrt (int y, int x)
+int _find_sqrt(int y, int x)
 {
 	if (y * y == x)
 	{
@@ -32,7 +32,7 @@ int _find_sqrt (int y, int x)
  *@n: Input number
  *
  * Return: The natural square root of 'n'.
- *         Return -1 if 'n' does not have a natural square root. 
+ *         Return -1 if 'n' does not have a natural square root.
  */
 
 int _sqrt_recursion(int n)
@@ -47,7 +47,7 @@ int _sqrt_recursion(int n)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (_find_sqrt(root, n));
 	}
