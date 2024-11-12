@@ -78,6 +78,10 @@ char *str_concat(char *s1, char *s2)
 	unsigned int length_s2 = 0;
 	char *destination;
 
+	if (s1 && s2 == NULL)
+	{
+		return (NULL);
+	}
 	while (*temp_s1 != '\0')
 	{
 		temp_s1++;
