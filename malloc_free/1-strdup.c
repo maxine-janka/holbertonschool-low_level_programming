@@ -44,6 +44,10 @@ char *_strdup(char *str)
 	char *temp = str;
 	char *copy;
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (*temp != '\0')
 	{
 		temp++;
