@@ -72,8 +72,7 @@ char *_strncat(char *dest, char *src, int n)
 
 char *str_concat(char *s1, char *s2)
 {
-	char *temp_s1 = s1;
-	char *temp_s2 = s2;
+
 	unsigned int length_s1 = 0;
 	unsigned int length_s2 = 0;
 	char *destination;
@@ -86,14 +85,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-	while (*temp_s1 != '\0')
+	while (s1[length_s1] != '\0')
 	{
-		temp_s1++;
 		length_s1++;
 	}
-	while (*temp_s2 != '\0')
+	while (s2[length_s2] != '\0')
 	{
-		temp_s2++;
 		length_s2++;
 	}
 
