@@ -78,7 +78,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int length_s2 = 0;
 	char *destination;
 
-	if (s1 && s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
