@@ -123,5 +123,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	_strncpy(concat_str, s1, s1_length);
 	_strncat(concat_str, s2, n);
 
+	concat_str[s1_length + n] = '\0';
+
 	return (concat_str);
 }
