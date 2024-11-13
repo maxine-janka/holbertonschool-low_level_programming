@@ -6,4 +6,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 void *_calloc(unsigned int nmemb, unsigned int size);
 
+int _strlen(char *s);
+char *_strncpy(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n);
+
 #endif
