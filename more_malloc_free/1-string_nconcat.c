@@ -24,64 +24,6 @@ int _strlen(char *s)
 }
 
 /**
- * _strncpy - Copies a string
- *
- * @dest: Pointer to the destination array where content is to be copied
- * @src: Input string to be copied
- * @n: The number of characters to be copied from src
- *
- * Return: The pointer to the copied string
- */
-
-char *_strncpy(char *dest, char *src, int n)
-{
-	int index = 0;
-
-	while (index < n && src[index] != '\0')
-	{
-		dest[index] = src[index];
-		index++;
-	}
-
-	while (index < n)
-	{
-		dest[index] = '\0';
-		index++;
-	}
-	return (dest);
-}
-
-/**
- * _strncat - Concatenates two strings using at most
- *            a specified number of bytes from src
- *
- * @src: Pointer to string to be appended to dest
- * @dest: Pointer to concatonated, resulting string
- * @n: The number of bytes from src to be appended to dest.
- *
- * Return: A pointer to the resulting string dest.
- */
-
-char *_strncat(char *dest, char *src, int n)
-{
-	int s_index;
-	int d_index = 0;
-
-	while (dest[d_index] != '\0')
-	{
-		d_index++;
-	}
-
-	for (s_index = 0; s_index < n && src[s_index] != '\0'; s_index++)
-	{
-		dest[d_index + s_index] = src[s_index];
-	}
-	dest[d_index + s_index] = '\0';
-
-	return (dest);
-}
-
-/**
  * string_nconcat - Concatonates two strings
  *
  *@s1: String the be appended.
@@ -94,7 +36,7 @@ char *_strncat(char *dest, char *src, int n)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int s1_length, s2_length;
+	unsigned int s1_length, s2_length, i, j;
 	char *concat_str;
 
 	if (s1 == NULL)
@@ -119,11 +61,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		concat_str[i] = s1[i];
+	}
+	for (j = 0; j < n; j++)
+	{
+		concat_str[i + j] = s2[j];
+	}
 
-	_strncpy(concat_str, s1, s1_length);
-	_strncat(concat_str, s2, n);
-
-	concat_str[s1_length + n] = '\0';
+	concat_str[i + j] = '\0';
 
 	return (concat_str);
 }
