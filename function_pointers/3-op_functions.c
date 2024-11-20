@@ -22,14 +22,15 @@ int op_add(int a, int b)
  * @b: Integer to substract a.
  *
  * Return: The difference of a and b.
- */ 
+ */
 
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 
-/* op_mul - Multiplies two integers and returns the product.
+/**
+ * op_mul - Multiplies two integers and returns the product.
  *
  * @a: First integer to multiply.
  * @b: Second integer to multiply.
@@ -71,7 +72,7 @@ int op_div(int a, int b)
  * Return: The remainder of the division of a by b.
  */
 
-int op_mod(int a, int b) 
+int op_mod(int a, int b)
 {
 	if (b == 0)
 	{

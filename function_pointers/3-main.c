@@ -8,14 +8,14 @@
  * @argc: The number of arguments
  * @argv: An array of arguments as strings.
  *
- * Result: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
 	int num1, num2;
 	int (*f)(int, int);
-	
+
 	if (argc != 4)
 	{
 		printf("Error\n");

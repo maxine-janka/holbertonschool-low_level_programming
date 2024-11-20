@@ -7,7 +7,7 @@
  * get_op_func - Selects the correct arithmetic operation function
  *               as per user input.
  *
- * s: Operator passed as an argument.
+ * @s: Operator passed as an argument.
  *
  * Return: A pointer to the fucntion that corresponds to the
  *         arithmatic operator passed as an argument.
@@ -22,9 +22,10 @@ int (*get_op_func(char *s))(int, int)
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-	}; int i;
+	};
 
-	i = 0;
+	int i = 0;
+
 	while (ops[i].op != NULL)
 	{
 		if (*s == *ops[i].op && s[1] == '\0')
