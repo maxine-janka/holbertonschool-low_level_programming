@@ -15,24 +15,29 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list strings;
 	unsigned int i;
-	
+	char *current;
+
 	va_start(strings, n);
-	
+
 	i = 0;
 	while (i < n)
 	{
-		if (strings == NULL)
-		{
-			printf("nil");
-		}
+		current = va_arg(strings, char*);
+
 		if (i > 0 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
-		printf("%s", va_arg(strings, char*));
+		if (current == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", current);
+		}
 		i++;
 	}
 	va_end(strings);
-       	printf("\n");
-
+	printf("\n");
 }
