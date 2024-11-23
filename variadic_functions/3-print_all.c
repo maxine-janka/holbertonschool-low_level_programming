@@ -5,7 +5,7 @@
 /**
  * print_char - Prints a char.
  *
- * @args: A list of arguments passed to the fucntion.
+ * @args: A list of arguments from va-list passed to the fucntion.
  *
  * Return: Nothing
  */
@@ -15,6 +15,27 @@ void print_char(va_list args)
 	printf("%c", va_arg(args, int));
 }
 
+/**
+ * print_int - Prints an integer.
+ *
+ * @args: A list of arguments from va_list passed to the function
+ */
+
+ void print_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+
+/**
+ * print_float - Prints a float.
+ *
+ * @args: A list of arguments from va_list passed to the function.
+ */
+
+void print_float(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
 
 /**
  * print_all - Prints any, followed by a new line.
@@ -31,6 +52,9 @@ void print_all(const char * const format, ...)
 
 	check_form checker[] = {
 		{"c", print_char},
+		{"i", print_int},
+		{"f", print_float},
+		//{"s", print_str},
 		{NULL, NULL}
 	};
 
