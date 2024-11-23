@@ -26,21 +26,26 @@ void print_char(va_list args)
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i, j;
 	va_list args;
 
-	format_t formats[] = {
+	check_form checker[] = {
 		{"c", print_char},
 		{NULL, NULL}
 	};
 
 	va_start(args, format);
 
-	while (formats[i].format != NULL)
+	while (format != NULL && format[i] != '\0')
 	{
-		if (*format == *formats[i].format && format[1] == '\0')
+		j = 0;
+		while (checker[j].form != NULL)
 		{
-			formats[i].f;
+			if (format[i] == *checker[j].form)
+			{
+				checker[j].f(args);
+			}
+			j++;
 		}
 		i++;
 	}

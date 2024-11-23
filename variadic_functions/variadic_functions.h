@@ -8,13 +8,20 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-struct format
+/**
+ * struct check_format - Structure to print the correct format.
+ *
+ * @form: The format to print.
+ * @f: The fucntion to print the specified form.
+ */
+
+struct check_format
 {
-	char *format;
+	char *form;
 	void (*f)();
 };
 
-typedef struct format format_t;
+typedef struct check_format check_form;
 
 void print_char(va_list args);
 
