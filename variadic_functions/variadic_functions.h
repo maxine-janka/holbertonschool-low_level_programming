@@ -26,5 +26,5 @@ typedef struct check_format check_form;
 void print_char(va_list args);
 void print_int(va_list args);
 void print_float(va_list args);
-
+void print_str(va_list args);
 #endif
