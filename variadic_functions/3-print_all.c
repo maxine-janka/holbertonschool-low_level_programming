@@ -23,7 +23,7 @@ void print_char(va_list args)
  * Return: Nothing
  */
 
- void print_int(va_list args)
+void print_int(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
@@ -47,11 +47,12 @@ void print_float(va_list args)
  * @args: A list of arguments from va_list passed into the function.
  *
  * Return: Nothing.
- */ 
+ */
 
 void print_str(va_list args)
 {
 	char *str;
+
 	str = va_arg(args, char *);
 
 	if (str == NULL)
