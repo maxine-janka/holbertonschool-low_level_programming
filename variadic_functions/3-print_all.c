@@ -73,6 +73,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i, j;
 	va_list args;
+	char *seperator = "";
 
 	check_form checker[] = {
 		{"c", print_char},
@@ -91,7 +92,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *checker[j].form)
 			{
+
+				printf("%s", seperator);
 				checker[j].f(args);
+				seperator = ", ";
 			}
 			j++;
 		}
