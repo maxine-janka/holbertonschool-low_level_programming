@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_list(list_t *head);
+ * free_list - Frees a list_t list;
  *
  * @head: A pointer to the start of the list_t.
  *
@@ -17,7 +17,7 @@ void free_list(list_t *head)
 	while (temp != NULL)
 	{
 		next_node = temp->next;
-	
+
 		free(temp->str);
 		free(temp);
 		temp = next_node;
