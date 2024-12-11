@@ -8,15 +8,17 @@
 int main(void)
 {
 	char *buff = NULL;
-	size_t buff_size;
+	size_t buff_size = 0;
 	char *token;
 	int i = 0, status;
 	char **str;
 	pid_t child;
-	
+
+
 	while (1) /*while true*/
 	{
 		write(1, "$ ", 2); /*print prompt*/
+				    
 		getline(&buff, &buff_size, stdin);
 		str = malloc(sizeof(char *) * 256);
 
@@ -28,11 +30,12 @@ int main(void)
 			token = strtok(NULL, " \t\n\r"); 
 			i++;
 		}
-		str[i] = '\0'; /*end with null term*/
+		str[i] = NULL; /*end with null term*/
 		child = fork();
 		if (child == -1)
 		{
 			perror("error");
+			free(str);
 			return (1);
 		}
 
@@ -49,5 +52,6 @@ int main(void)
 		i = 0;
 		free(str);
 	}
+	free(buff);
 	return (0);
 }
