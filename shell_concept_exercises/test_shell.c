@@ -6,6 +6,40 @@
 #include <sys/wait.h>
 
 /**
+ * _strlen - Counts the number of characters in an array of characters
+ * @str: string
+ * Return: length of the array characters
+ */
+
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (str[length] != '\0')
+		length++;
+	return (length);
+} 
+/**
+ * white_space - Finds the length of the string that only contains
+ *               spaces or tabs.
+ * Return: 1 if string only contains whitespace.
+ *         0 if contains other characters.
+ */ 
+ int white_space(const char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (str[i] != ' ' && str[i] != '\t')
+			return (0);
+		i++;
+	}
+	return 1;
+}
+
+
+/**
  * read_line - Reads a line of input from the user.
  *
  * Return: Pointer to the dynamically allocated input string, or NULL on EOF.
@@ -24,8 +58,7 @@ char *read_line(void)
         return NULL;
     }
 
-	if (buffer[bytes_read - 1] == '\n')
-        buffer[bytes_read - 1] = '\0';
+    buffer[bytes_read - 1] = '\0';
 
     return buffer;
 }
@@ -106,7 +139,7 @@ int main(void)
             break;
         }
 
-        if (strlen(line) == 0 || strspn(line, " \t") == strlen(line))
+        if (_strlen(line) == 0 || white_space(line))
         {
             free(line);
             continue;
@@ -118,4 +151,3 @@ int main(void)
 
     return 0;
 }
-
