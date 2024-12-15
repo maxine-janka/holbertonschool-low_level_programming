@@ -29,7 +29,7 @@ void execute_command(char *line, char **environ)
 		i++;
 	}
 	str[i] = NULL;
-	
+
 	child = fork();
 	if (child == -1)
 	{
