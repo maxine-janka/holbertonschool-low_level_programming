@@ -10,7 +10,7 @@
  */
 
 void child_process(char **str, char **environ)
-{	
+{
 	pid_t child;
 	int status;
 
