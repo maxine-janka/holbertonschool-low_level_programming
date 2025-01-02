@@ -23,7 +23,7 @@ unsigned int binary_to_uint(const char *b)
 		length++;
 
 	while (length > 0)
-	{	
+	{
 		/*Check for valid binary num*/
 		if (b[length - 1] != '0' && b[length - 1] != '1')
 			return (0);
