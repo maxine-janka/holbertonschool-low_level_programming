@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	/*pname, source file and dest file passed in*/
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
