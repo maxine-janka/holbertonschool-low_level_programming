@@ -58,6 +58,11 @@ int main(int argc, char *argv[])
 		}
 		/*Read in 1024 byte chunks until EOF (b_read == 0)*/
 		b_read = read(fd_from, buffer, 1024);
+		if (b_read == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 	}
 
 	/*Close source and dest file*/
